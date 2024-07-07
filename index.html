@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel de Kleine Muis</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600");
+
+        @keyframes pop-word {
+            to {
+                transform: rotateX(0);
+            }
+        }
+
+        @keyframes show {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bar-scale {
+            to {
+                transform: scaleY(1);
+            }
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0);
+            }
+
+            60% {
+                transform: scale(1) translate(4px, 1px) rotate(8deg);
+            }
+
+            100% {
+                transform: scale(0) translate(4px, 1px) rotate(8deg);
+            }
+        }
+
+        @keyframes shimmer {
+            to {
+                text-shadow: 0 0 8px red;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #509a07;
+            font-family: "Playfair Display", Vidaloka, serif;
+            font-size: 8rem;
+
+            line-height: 0.85;
+            perspective: 500px;
+        }
+
+        .word {
+            display: block;
+
+            animation: show 0.01s forwards, pop-word 1.5s forwards;
+            animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+            opacity: 0;
+
+            transform: rotateX(120deg);
+            transform-origin: 50% 100%;
+        }
+
+        .word:nth-of-type(2) {
+            padding: 0 2rem;
+
+            animation-delay: 1.5s;
+
+            color: #6c3000;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
+
+        body {
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            border-radius: 20px;
+            border: 4px solid #a16a6a;
+            margin: 16px auto 0;
+            max-width: 500px;
+            height: auto;
+            display: block;
+        }
+
+
+        p {
+            color: lightgoldenrodyellow;
+            font: 400 1em/1.1 'Open Sans', sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="logo.jpg" alt="Logo" class="logo rotate-in-center">
+    <h1>
+        <span class="word">Hotel</span>
+        <span class="word">De Kleine Muis</span>
+    </h1>
+    <p>
+        Welkom in dit fijne hotel! Hier kun je heerlijk ontspannen en genieten van de rust. Ook hebben wij heerlijk eten, zoals sushi, ei, en boterhammen.
+    </p>
+</div>
+</body>
+</html>
